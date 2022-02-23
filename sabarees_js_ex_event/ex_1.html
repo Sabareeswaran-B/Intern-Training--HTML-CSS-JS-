@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Calculator</title>
+    <script>
+        function square(value) {
+            var result = value * value;
+            return result;
+        }
+
+        function halfOf(value) {
+            var result = value / 2;
+            return result;
+        }
+
+        function percentageOf(numOne, numTwo) {
+            var result = (numOne / numTwo) * 100;
+            return result.toFixed(0);
+        }
+
+        function areaOfCircle(radius) {
+            var result = 3.14 * radius * radius;
+            return result.toFixed(2);
+        }
+
+        function calculate() {
+            console.log("working...");
+            var number = document.getElementById("numberInput").value;
+            var result1 = halfOf(number)
+            var result2 = square(result1);
+            var result3 = areaOfCircle(result2);
+            var result4 = percentageOf(result2, result3);
+
+            document.getElementById("result1").innerHTML = "Half of " + number + " is. " + result1;
+            document.getElementById("result2").innerHTML = "Square of " + result1 + " is. " + result2;
+            document.getElementById("result3").innerHTML = "The area for a circle with radius " + result2 + " is. " + result3;
+            document.getElementById("result4").innerHTML = result2 + " is. " + result4 + "% of " + result3;
+        }
+    </script>
+    <style>
+        .container {
+            text-align: center;
+            height: 600px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Calculator</h1>
+        <input type="number" id="numberInput" placeholder="enter a number" />
+        <br>
+        <button onclick="calculate();">Submit</button>
+
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+    </div>
+
+</body>
+
+</html>

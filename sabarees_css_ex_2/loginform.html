@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="loginform.css">
+    <script>
+
+        var users = [
+            {
+                userName: "Sabarees",
+                password: "qwerty"
+            },
+            {
+                userName: "Kanishkar",
+                password: "admin"
+            },
+            {
+                userName: "Tamizharivu",
+                password: "english"
+            },
+            {
+                userName: "VishnuPrashob",
+                password: "123456"
+            }
+        ];
+
+        function submithandler() {
+            var userName = document.getElementById("UserName").value;
+            var password = document.getElementById("Password").value;
+            users
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+    <div class="input-container" style="width: 400px; float: right;">
+        <input class="input-field" type="text">
+        <img src="search.png" alt="user_icon" id="usericon" />
+    </div>
+    <br>
+    <div style="margin-top: 150px;"></div>
+    <div style="max-width: 500px;margin: auto;">
+        <h2>User Login page</h2>
+        <form method="post" name="login" onsubmit="submithandler()">
+            <label for="UserName">UserName</label>
+            <div class="input-container">
+                <input class="input-field" type="text" placeholder="Username" id="UserName" name="usrnm">
+                <img src="user.jpeg" alt="user_icon" id="usericon" />
+            </div>
+
+            <label for="Password">Password</label>
+            <div class="input-container">
+                <input class="input-field" type="password" id="Password" placeholder="Password" name="psw">
+                <img src="disable.png" alt="user_icon" id="usericon" />
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        function set_background() {
+            var docBody = document.getElementsByTagName("body")[0];
+            var bodyElement = docBody.getElementsByTagName("p");
+            var p1 = bodyElement[0];
+            p1.style.backgroundColor = "rgb(255,0,0)"
+            var p2 = bodyElement[1];
+            p2.style.backgroundColor = "rgb(255,255,0)"
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="set_background()">Click to set paragraph background color</button>
+
+    <p>Javascript Excercises</p>
+    <br>
+    <p>Excercises</p>
+
+</body>
+
+</html>

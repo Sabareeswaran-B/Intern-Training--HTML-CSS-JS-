@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Structure</title>
+    <style>
+        .container {
+            margin: auto;
+            margin-top: 10%;
+            max-width: 40%;
+            background-color: whitesmoke;
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function findMax(event) {
+            event.preventDefault();
+            var bday = document.getElementById("bdayparty").value;
+            var engagement = document.getElementById("engagement").value;
+            var corporate = document.getElementById("corporate").value;
+            var social = document.getElementById("social").value;
+
+            var result = document.getElementById("result");
+            var max = Math.max(bday, engagement, corporate, social);
+
+            if (max == bday) {
+                result.innerHTML = "The maximum number of event ocurred in this month is Birthday event";
+            } else if (max == engagement) {
+                result.innerHTML = "The maximum number of event ocurred in this month is Engagement event";
+            } else if (max == corporate) {
+                result.innerHTML = "The maximum number of event ocurred in this month is Corporate event";
+            } else {
+                result.innerHTML = "The maximum number of event ocurred in this month is Social gathering";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Event count for month</h1>
+        <form>
+            <lable for="bdayparty">Birthday party event:</lable>
+            <input type="number" id="bdayparty">
+            <br>
+            <br>
+
+            <lable for="engagement">Engagement party event:</lable>
+            <input type="number" id="engagement">
+            <br>
+            <br>
+
+            <lable for="corporate">Corporate event:</lable>
+            <input type="number" id="corporate">
+            <br>
+            <br>
+
+            <lable for="social">Social Gathering event:</lable>
+            <input type="number" id="social">
+            <br>
+            <br>
+
+            <button onclick="findMax(event)">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>

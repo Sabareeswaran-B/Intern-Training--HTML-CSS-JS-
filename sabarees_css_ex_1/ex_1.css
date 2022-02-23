@@ -1,0 +1,85 @@
+/* Exercise 1 */
+h1{
+    font-size: 22px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+h4{
+    font-size: 14px;
+}
+
+p{
+    font-size: 10px;
+}
+
+/* Exercise 2 */
+
+.contact-section{
+    background-color: #bbf4b6;
+    color: #0c0068;
+}
+
+.contact-section .heading{
+    color: #de9707;
+}
+
+/* Excercise 3 */
+
+#h1Tag {
+    color: #F835C0;
+}
+
+#h2Tag {
+    color: #ff0000;
+}
+
+#h3Tag {
+    color: #15D365
+}
+
+#h5Tag {
+    color: #9F41F5;
+}
+
+/* Exercise 4 */
+
+.serviceDescription, .aboutUs {
+    background-color: #81daf5;
+    color: #df0174;
+}
+
+/* Exercise 5 */
+
+.imageBg {
+    background-image: url("social gathering.jpeg");
+    background: fixed;
+}
+
+/* Exercise 6 */
+
+.row {
+    display: flex;
+}
+
+.image1 {
+    flex: 50%;
+    width: 40%;
+    height: 50%;
+}
+
+.image2 {
+    flex: 50%;
+    width: 40%;
+    height: 50%;
+}
+
+.grey-scale {
+    filter: grayscale(100%);
+}

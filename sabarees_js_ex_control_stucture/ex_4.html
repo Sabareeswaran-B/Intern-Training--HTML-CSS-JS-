@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control structure</title>
+    <style>
+        .container {
+            margin: auto;
+            margin-top: 10%;
+            max-width: 40%;
+            background-color: whitesmoke;
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function findSign(e) {
+            e.preventDefault();
+            x = document.getElementById("number1").value;
+            y = document.getElementById("number2").value;
+            z = document.getElementById("number3").value;
+            if (x > 0 && y > 0 && z > 0) {
+                alert("The sign is +");
+            } else if (x < 0 && y < 0 && z > 0) {
+                alert("The sign is +");
+            } else if (x > 0 && y < 0 && z < 0) {
+                alert("The sign is +");
+            } else if (x < 0 && y > 0 && z < 0) {
+                alert("The sign is +");
+            } else {
+                alert("The sign is -");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Find the sign</h1>
+        <form>
+            <lable for="bdayparty">Number 1:</lable>
+            <input type="number" id="number1">
+            <br>
+            <br>
+
+            <lable for="engagement">Number 2:</lable>
+            <input type="number" id="number2">
+            <br>
+            <br>
+
+            <lable for="corporate">Number 3:</lable>
+            <input type="number" id="number3">
+            <br>
+            <br>
+
+            <button onclick="findSign(event)">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>

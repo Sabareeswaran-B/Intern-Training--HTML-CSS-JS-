@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Excercise spacing and padding</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px double #dddddd;
+        }
+
+        .contaniner {
+            padding: 15px 100px 100px 100px;
+            margin-bottom: 100px;
+        }
+
+        select {
+            min-width: 50%;
+            min-height: 35px;
+        }
+
+        input[type = "text"], input[type = "password"] {
+            width: 90%;
+            height: 25px;
+        }
+
+        td,
+        th {
+            border: 1px double #dddddd;
+            text-align: left;
+        }
+        button {
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Title -->
+    <h1 style="text-align:center">Pink Frog Event Organizer</h1>
+    <hr><br>
+
+    <div class="container">
+        <table cellspacing="5" cellpadding="5">
+
+            <!-- Rows -->
+            <tr>
+                <td style="text-align: center;" colspan="3"><b>User Form</b></td>
+            </tr>
+
+            <tr>
+                <td>Enter name</td>
+                <td colspan="2">
+                    <input type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>Enter password</td>
+                <td colspan="2">
+                    <input type="password" />
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Address</td>
+                <td colspan="2">
+                    <input type="text" maxlength="250" max="250" />
+                </td>
+            </tr>
+            <tr>
+                <td>Select Game</td>
+                <td colspan="2">
+                    <input type="checkbox" /> Hockey <br>
+                    <input type="checkbox" /> Football <br>
+                    <input type="checkbox" /> Badminton <br>
+                    <input type="checkbox" /> Cricket <br>
+                    <input type="checkbox" /> Vollyball <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td colspan="2">
+                    <input type="radio" name="gender" /> Male
+                    <input type="radio" name="gender" /> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Select your age</td>
+                <td colspan="3">
+                    <select>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+                    <input type="file" />
+                </td>
+            </tr>
+            <tr style="padding: 0%;">
+                <td>
+                    <button>Click Me</button>
+                </td>
+                <td>
+                    <button>reset</button>
+                </td>
+                <td>
+                    <button>Submit Form</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

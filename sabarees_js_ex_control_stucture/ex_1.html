@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage validator</title>
+    <script>
+        function validate(event) {
+            event.preventDefault();
+            var form = document.getElementById("marriageForm");
+            var groomsAge = form[0].value;
+            var bridesAge = form[1].value;
+            if (groomsAge >= 21 && bridesAge >= 18) {
+                document.getElementById("validation").innerHTML = "Valid marriage";
+            } else {
+                document.getElementById("validation").innerHTML = "Invalid marriage";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div style="margin: auto;max-width: 60%;">
+        <form id="marriageForm">
+            <h1>Marriage validator</h1>
+            <label for="groomAge">Groom's Age:</label>
+            <input id="groomsAge" type="number" />
+            <br>
+            <label for="bridesAge">Bride's Age:</label>
+            <input id="bridesAge" type="number" />
+            <br>
+            <button onclick="validate(event)">Validate</button>
+            <br>
+        </form>
+        <p id="validation"></p>
+    </div>
+
+</body>
+
+</html>

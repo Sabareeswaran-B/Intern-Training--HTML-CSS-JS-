@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="loginform.css">
+    </head>
+
+<body>
+
+    <p>When you submit the form, a function is triggered which alerts some text.</p>
+
+    <form method="post" name="login" onsubmit="myFunction()">
+        <label for="UserName">UserName</label>
+        <div class="input-container">
+            <input class="input-field" type="text" placeholder="Username" id="UserName" name="usrnm">
+            <img src="user.jpeg" alt="user_icon" id="usericon" />
+        </div>
+
+        <label for="Password">Password</label>
+        <div class="input-container">
+            <input class="input-field" type="password" id="Password" placeholder="Password" name="psw">
+            <img src="disable.png" alt="user_icon" id="usericon" />
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function myFunction() {
+            alert("The form was submitted");
+        }
+    </script>
+
+</body>
+
+</html>

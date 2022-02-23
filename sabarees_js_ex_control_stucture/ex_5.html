@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control structure</title>
+    <style>
+        .container {
+            margin: auto;
+            margin-top: 10%;
+            max-width: 40%;
+            background-color: whitesmoke;
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function findMax(event) {
+            event.preventDefault();
+            var a = document.getElementById("number1").value;
+            var b = document.getElementById("number2").value;
+            var c = document.getElementById("number3").value;
+            var d = document.getElementById("number4").value;
+            var e = document.getElementById("number5").value;
+
+            var result = document.getElementById("result");
+
+            if (a > b && a > c && a > d && a > e) {
+                result.innerHTML = a + "is the largest number";
+            } else if (b > a && b > c && b > d && b > e) {
+                result.innerHTML = b + "is the largest number";
+            } else if (c > a && c > b && c > d && c > e) {
+                result.innerHTML = c + "is the largest number";
+            } else if (d > a && d > b && d > c && d > e) {
+                result.innerHTML = d + "is the largest number";
+            } else {
+                result.innerHTML = e + " is the largest number";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Find the sign</h1>
+        <form>
+            <lable for="number1">Number 1:</lable>
+            <input type="number" id="number1">
+            <br>
+            <br>
+
+            <lable for="number2">Number 2:</lable>
+            <input type="number" id="number2">
+            <br>
+            <br>
+
+            <lable for="number3">Number 3:</lable>
+            <input type="number" id="number3">
+            <br>
+            <br>
+
+            <lable for="number4">Number 4:</lable>
+            <input type="number" id="number4">
+            <br>
+            <br>
+
+            <lable for="number5">Number 5:</lable>
+            <input type="number" id="number5">
+            <br>
+            <br>
+
+            <button onclick="findMax(event)">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
